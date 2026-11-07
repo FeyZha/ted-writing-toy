@@ -1,0 +1,22 @@
+{
+  "name": "english-writing-mvp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "prepare:lesson": "node scripts/prepare-lesson.mjs",
+    "dev": "vite --host 127.0.0.1 --port 4398 --strictPort",
+    "check": "tsc --noEmit",
+    "test": "node --test tests/*.test.ts",
+    "build": "npm run prepare:lesson && npm run check && vite build",
+    "start": "node scripts/server.mjs"
+  },
+  "dependencies": { "react": "19.3.1", "react-dom": "19.3.1" },
+  "devDependencies": {
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "typescript": "7.0.2",
+    "vite": "8.3.6"
+  }
+}
